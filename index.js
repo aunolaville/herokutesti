@@ -7,6 +7,9 @@ const cors = require('cors');
 app.use(cors());
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
+app.get('/', (req, res) => {
+    res.send('<h1>hello</h1>')
+});
 
 app.get('/secondaries', (req, res) => {
     res.send([{
